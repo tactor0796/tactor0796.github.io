@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediSell</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .menu-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .menu-dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #111;
+      border: 1px solid #333;
+      border-radius: 8px;
+      width: 150px;
+      text-align: left;
+    }
+
+    .menu-dropdown a {
+      display: block;
+      padding: 12px 16px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid #333;
+    }
+
+    .menu-dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .menu-dropdown a:hover {
+      background-color: #222;
+    }
+
+    .logo {
+      margin-top: 100px;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .shoes {
+      margin: 60px auto;
+      width: 120px;
+    }
+
+    .login {
+      margin-top: 60px;
+      font-size: 18px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
+  <div class="menu-dropdown" id="dropdownMenu">
+    <a href="#"><a href="MediSell.html">เข้าสู่ระบบ</a>
+    <a href="#"><a href="MediSell2.html">ลงทะเบียน</a>
+  </div>
+
+  <div class="logo">MediSell</div>
+
+  <div>
+    <img src="fordowloand.MediSell/0800-2-removebg-preview-2.png" alt="Shoes logo" height="400">
+  </div>
+
+  
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Optional: Close the menu if clicking outside
+    window.addEventListener('click', function(e) {
+      const menu = document.getElementById('dropdownMenu');
+      const icon = document.querySelector('.menu-icon');
+      if (!menu.contains(e.target) && !icon.contains(e.target)) {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
