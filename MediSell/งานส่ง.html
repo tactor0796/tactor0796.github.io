@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>หน้าสมัครสมาชิก</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="password"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .gender-group {
+      margin-top: 10px;
+    }
+    .gender-group label {
+      font-weight: normal;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>สมัครสมาชิก</h2>
+    <form action="#" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="name">ชื่อ:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="lastname">นามสกุล:</label>
+      <input type="text" id="lastname" name="lastname" required>
+
+      <label>เพศ:</label>
+      <div class="gender-group">
+        <label><input type="radio" name="gender" value="male" required> ชาย</label>
+        <label><input type="radio" name="gender" value="female"> หญิง</label>
+        <label><input type="radio" name="gender" value="other"> อื่น ๆ</label>
+      </div>
+
+      <label for="address">ที่อยู่:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <button type="submit">ลงทะเบียน</button>
+    </form>
+  </div>
+
+</body>
+</html>
