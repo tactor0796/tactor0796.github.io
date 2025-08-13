@@ -95,13 +95,12 @@ authForm.addEventListener('submit', function(e) {
       errorMsg.textContent = "Username นี้มีคนใช้แล้ว!";
       errorMsg.classList.remove('hidden');
     } else {
-      users[username] = password;
-      localStorage.setItem('users', JSON.stringify(users));
-      alert("สมัครสมาชิกสำเร็จ! กรุณาเข้าสู่ระบบ");
-      toggleLink.click(); // สลับกลับไปหน้า login
-    }
+     users[username] = password;
+localStorage.setItem('users', JSON.stringify(users));
+alert("สมัครสมาชิกสำเร็จ! ยินดีต้อนรับเข้าสู่ระบบ");
+window.location.href = "file:///Volumes/tactor/dasicWedsite/tactor0796.github.io/tactor0796.github.io/โปรเจคจารมัท/Basketball%20Basics.html"; // เด้งไปหน้า main
   }
-});
+}
 </script>
 
 </body>
